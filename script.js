@@ -60,7 +60,32 @@ document.getElementById("downloadBtn").onclick = () => {
 // Print
 
 document.getElementById('printButton').onclick = () => {
-  alert('Print flow coming soon. This will send your design to a secure render endpoint.');
+  
+  const email = prompt("Enter your email so we can confirm your print:");
+  if (!email || !validateEmail(email)) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  const buildData = {
+    email: email,
+    timestamp: new Date().toISOString(),
+    selections: selectedBits
+  };
+
+  console.log("Print submission:", buildData);
+
+  // Optional: Save to localStorage for review
+  localStorage.setItem("lastPrintSubmission", JSON.stringify(buildData));
+
+  alert("Thanks! Your build has been submitted for printing. We'll be in touch.");
 };
+
+// Simple email validation
+function validateEmail(email) {
+  return /\S+@\S+\.\S+/.test(email);
+}
+
+
 
 loadSchema();
