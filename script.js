@@ -58,7 +58,7 @@ document.getElementById("downloadBtn").onclick = () => {
 
 // Email with asset list
 document.getElementById("emailBtn").onclick = () => {
-  const email = "your@email.com"; // Replace with your email
+  const email = "aiclothingbytsm@gmail.com"; // Replace with your email
   const subject = "Character Build Submission";
 
   const selections = Object.entries(selectedBits)
