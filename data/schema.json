@@ -1,6 +1,40 @@
 {
   "categories": [
     {
+      "name": "Pumpkin",
+      "options": [
+        {
+          "id": "pumpkin_base",
+          "label": "Uncarved Pumpkin",
+          "image": "assets/pumpkin/base.png",
+          "lore": "A blank canvas awaiting your emotional imprint."
+        }
+      ]
+    },
+    {
+      "name": "Face",
+      "options": [
+        {
+          "id": "face_grin",
+          "label": "Grinning Curse",
+          "image": "assets/face/carve-face-3.png",
+          "lore": "A mischievous grin carved under a blood moon."
+        },
+        {
+          "id": "face_frown",
+          "label": "Mourning Ember",
+          "image": "assets/face/carve-face-2.png",
+          "lore": "A sorrowful gaze that remembers every fallen flame."
+        },
+        {
+          "id": "face_shock",
+          "label": "Stitched Silence",
+          "image": "assets/face/carve-face-1.png",
+          "lore": "Eyes wide with secrets too loud to speak."
+        }
+      ]
+    },
+    {
       "name": "Head",
       "options": [
         {
@@ -53,3 +87,4 @@
     }
   ]
 }
+
