@@ -8,7 +8,7 @@
           "label": "Uncarved Pumpkin",
           "image": "assets/pumpkin/base.png",
           "lore": "A blank canvas awaiting your emotional imprint."
-        }
+        },
         {
           "id": "pumpkin_base_2",
           "label": "Uncarved Pumpkin",
@@ -37,8 +37,8 @@
           "label": "Stitched Silence",
           "image": "assets/face/carve-face-1.png",
           "lore": "Eyes wide with secrets too loud to speak."
-        }
-         {
+        },
+        {
           "id": "face_fear",
           "label": "Glaring Stare",
           "image": "assets/face/carve-face-4.png",
@@ -99,4 +99,3 @@
     }
   ]
 }
-
