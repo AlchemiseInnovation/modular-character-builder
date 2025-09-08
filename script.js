@@ -56,36 +56,22 @@ document.getElementById("downloadBtn").onclick = () => {
   };
 };
 
+// Email with asset list
+document.getElementById("emailBtn").onclick = () => {
+  const email = "your@email.com"; // Replace with your email
+  const subject = "Character Build Submission";
 
-// Print
+  const selections = Object.entries(selectedBits)
+    .map(([key, value]) => {
+      const filename = value.split("/").pop();
+      return `${key}: ${filename}`;
+    })
+    .join("%0D%0A");
 
-document.getElementById('printButton').onclick = () => {
-  
-  const email = prompt("Enter your email so we can confirm your print:");
-  if (!email || !validateEmail(email)) {
-    alert("Please enter a valid email.");
-    return;
-  }
+  const body = `Hi,%0D%0A%0D%0AHere is my character build submission:%0D%0A%0D%0A${selections}%0D%0A%0D%0AI'll attach the image manually.%0D%0A%0D%0AThanks!`;
 
-  const buildData = {
-    email: email,
-    timestamp: new Date().toISOString(),
-    selections: selectedBits
-  };
-
-  console.log("Print submission:", buildData);
-
-  // Optional: Save to localStorage for review
-  localStorage.setItem("lastPrintSubmission", JSON.stringify(buildData));
-
-  alert("Thanks! Your build has been submitted for printing. We'll be in touch.");
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+  window.location.href = mailtoLink;
 };
-
-// Simple email validation
-function validateEmail(email) {
-  return /\S+@\S+\.\S+/.test(email);
-}
-
-
 
 loadSchema();
